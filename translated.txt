@@ -1,0 +1,2 @@
+Dies schafft eine neue, isolierte Python -Umgebung speziell für Ihr Projekt. 
+Das Venv -Teil am Ende ist der Name des Verzeichnisses, in dem Ihre virtuelle Umgebung leben wird.
