@@ -1,11 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
-url = 'https://news.ycombinator.com/news'
-res = requests.get(url)
 
 
-# def get_value(dic):
-#     return dic['point']
 
 def get_info(links, subtext):
     hr = []
@@ -20,13 +16,26 @@ def get_info(links, subtext):
     hr.sort(reverse=True, key = lambda dic: dic['point'])
     return hr
 def main():
-    if res.status_code == 200:
-        soup = BeautifulSoup(res.text, "html.parser")
-        links =   soup.select('.titleline')
-        subtext =  soup.select('.subtext')
-        print(get_info(links, subtext))
-    else: 
-        print('somting went wrong')
+    url = 'https://news.ycombinator.com/'
+    current_page_relative_path = 'news'
+    for page in range(3):
+        full_url = url + current_page_relative_path
+        res = requests.get(full_url)
+        if res.status_code == 200:
+            soup = BeautifulSoup(res.text, "html.parser")
+            links =   soup.select('.titleline')
+            subtext =  soup.select('.subtext')
+            print(f'_____________________result from page: {page}_____________________')
+            print(get_info(links, subtext))
+            more_links_tag = soup.find('a', class_= 'morelink')
+            if more_links_tag and more_links_tag.get('href'):
+                current_page_relative_path = more_links_tag.get('href')
+            else:
+                print(f"No 'More' link found on page {page}. End of pages.")
+                break 
+        else: 
+            print('somting went wrong')
+            break
 
 
 main()
