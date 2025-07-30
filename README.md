@@ -1,24 +1,20 @@
-Okay, let's take your existing `README.md` and expand it to include the "Web Development with Flask" project (`web-dev`) you're working on. I'll integrate it as a new main section.
-
-```markdown
-# 🐍 Python Learning Journey: Zero To Mastery Exercises & Web Development Projects 🐍
+# 🐍 Python Learning Journey: Zero To Mastery Exercises 🐍
 
 This repository documents my progress and solutions to exercises from the
-Zero To Mastery (ZTM) Python programming course, along with independent web
-development projects. It serves as a practical portfolio of fundamental Python
-concepts, scripting techniques, and web development basics.
+Zero To Mastery (ZTM) Python programming course. It serves as a practical
+portfolio of fundamental Python concepts, scripting techniques, and web
+development basics.
 
 ---
 
 ## 📁 Repository Structure
 
-The exercises and projects are organized into directories corresponding to different topics or phases of the course and separate development efforts:
+The exercises are organized into directories corresponding to different topics or phases of the course:
 
 * `fondation/`: Contains fundamental Python concepts and exercises.
 * `scrapingData/`: Focuses on web scraping projects.
 * `scripting/`: Includes general Python scripting exercises, often related to system interaction or utilities.
-* `web-dev/`: Houses a dedicated Flask web application project.
-* `my_env/` (or `web-lear/` if you keep its name in the top-level repo) and `__pycache__/`: Virtual environments and Python's compiled bytecode cache (ignored by Git).
+* `my_env/` and `__pycache__/`: Virtual environment and Python's compiled bytecode cache (ignored by Git).
 
 ---
 
@@ -84,10 +80,8 @@ This directory contains a web application built using the Flask microframework. 
 * `smtplib` (for email sending - if applicable)
 * `PyPDF2` (for PDF manipulation - if applicable)
 * **HTML5, CSS3, JavaScript** (for front-end development)
-* **MariaDB** (for backend data storage)
 
 ---
-
 ## 💡 Lessons Learned
 
 This course and these exercises have been instrumental in deepening my understanding of Python's core features, object-oriented programming, file handling, API interactions, and best practices for writing robust and organized Python code.
@@ -98,6 +92,4 @@ Furthermore, the `web-dev` project has provided practical experience in:
 * Structuring Flask projects with templates and static files.
 * Connecting Flask applications to relational databases (MariaDB) using an ORM like SQLAlchemy for persistent data management.
 * The interplay between front-end (HTML, CSS, JS) and back-end (Flask, Python) in a web application.
-
 ---
-```
